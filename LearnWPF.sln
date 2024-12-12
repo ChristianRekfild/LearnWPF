@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Experimental", "Experimenta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExperimentalWPF", "Experimental\ExperimentalWPF\ExperimentalWPF.csproj", "{08E2C0EF-6FA6-41B8-B13C-1C92462803FD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Other", "Other", "{CC5D2471-B4DF-4153-98F8-3BA1D368B107}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,7 +38,9 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{23B7DA4F-6920-4F32-B975-B54E725F7E0B} = {CC5D2471-B4DF-4153-98F8-3BA1D368B107}
 		{A438E1E8-D098-4086-8546-61B107DFE528} = {23B7DA4F-6920-4F32-B975-B54E725F7E0B}
+		{35EB2670-B937-40B8-94FA-F026A00BBDA2} = {CC5D2471-B4DF-4153-98F8-3BA1D368B107}
 		{08E2C0EF-6FA6-41B8-B13C-1C92462803FD} = {35EB2670-B937-40B8-94FA-F026A00BBDA2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution

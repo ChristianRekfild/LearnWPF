@@ -8,4 +8,23 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Experimental\**" />
+    <Compile Remove="Tests\**" />
+    <EmbeddedResource Remove="Experimental\**" />
+    <EmbeddedResource Remove="Tests\**" />
+    <None Remove="Experimental\**" />
+    <None Remove="Tests\**" />
+    <Page Remove="Experimental\**" />
+    <Page Remove="Tests\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="Models\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Services\" />
+    <Folder Include="Infrastructure\" />
+  </ItemGroup>
+
 </Project>
