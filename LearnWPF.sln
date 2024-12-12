@@ -5,6 +5,14 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnWPF", "LearnWPF.csproj", "{81F3C777-C78F-4D50-ABD8-94F7581BF0B0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{23B7DA4F-6920-4F32-B975-B54E725F7E0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnWPF_Tests", "Tests\LearnWPF_Tests\LearnWPF_Tests.csproj", "{A438E1E8-D098-4086-8546-61B107DFE528}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Experimental", "Experimental", "{35EB2670-B937-40B8-94FA-F026A00BBDA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExperimentalWPF", "Experimental\ExperimentalWPF\ExperimentalWPF.csproj", "{08E2C0EF-6FA6-41B8-B13C-1C92462803FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +23,21 @@ Global
 		{81F3C777-C78F-4D50-ABD8-94F7581BF0B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81F3C777-C78F-4D50-ABD8-94F7581BF0B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81F3C777-C78F-4D50-ABD8-94F7581BF0B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A438E1E8-D098-4086-8546-61B107DFE528}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A438E1E8-D098-4086-8546-61B107DFE528}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A438E1E8-D098-4086-8546-61B107DFE528}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A438E1E8-D098-4086-8546-61B107DFE528}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08E2C0EF-6FA6-41B8-B13C-1C92462803FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08E2C0EF-6FA6-41B8-B13C-1C92462803FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08E2C0EF-6FA6-41B8-B13C-1C92462803FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08E2C0EF-6FA6-41B8-B13C-1C92462803FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A438E1E8-D098-4086-8546-61B107DFE528} = {23B7DA4F-6920-4F32-B975-B54E725F7E0B}
+		{08E2C0EF-6FA6-41B8-B13C-1C92462803FD} = {35EB2670-B937-40B8-94FA-F026A00BBDA2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {81E7ECE5-96B9-46DA-B6B2-212F53AC9EED}
