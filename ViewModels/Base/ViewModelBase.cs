@@ -9,9 +9,10 @@ using System.Threading.Tasks;
 
 namespace LearnWPF.ViewModels.Base
 {
-    internal abstract class ViewModelBase : INotifyPropertyChanged
+    internal abstract class ViewModelBase : INotifyPropertyChanged, IDisposable
     {
         public event PropertyChangedEventHandler? PropertyChanged;
+
 
         protected virtual void OnProptrtyChanged([CallerMemberName] string propertyName = null)
         {
@@ -27,5 +28,20 @@ namespace LearnWPF.ViewModels.Base
             OnProptrtyChanged(propertyName);
             return true;
         }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+
+        private bool _disposed;
+        public void Dispose(bool disposing)
+        {
+            if (!disposing || _disposed) 
+                return;
+
+            _disposed = true;
+        }
+
     }
 }
