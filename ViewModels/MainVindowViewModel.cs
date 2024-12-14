@@ -9,6 +9,8 @@ namespace LearnWPF.ViewModels
 {
     class MainVindowViewModel : ViewModelBase
     {
+
+        #region Title
         private string _title = "Анализ статистики CV19";
         /// <summary>
         /// Заголовок окна
@@ -18,5 +20,18 @@ namespace LearnWPF.ViewModels
             get => _title;
             set => Set(ref _title, value);
         }
+        #endregion
+
+        #region Status
+        private string _status = "Готов!";
+        /// <summary>
+        /// Статус окна
+        /// </summary>
+        public string Status
+        {
+            get => _status;
+            set => Set(ref _status, value);
+        }
+        #endregion
     }
 }
