@@ -21,8 +21,16 @@
                 <MenuItem Header="О программе"></MenuItem>
             </MenuItem>
         </Menu>
+        <!--#region 213-->
         <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem>
+                <TextBlock Text="1234" MinWidth="150" MaxWidth="300"/>
+            </StatusBarItem>
+            <StatusBarItem>
+                <ProgressBar Width="120" Height="20"/>
+            </StatusBarItem>
         </StatusBar>
+        <!--#endregion-->
         <TabControl>
             <TabItem Header="Вкладка 1">
                 <Grid>
