@@ -1,9 +1,12 @@
-﻿using LearnWPF.ViewModels.Base;
+﻿using LearnWPF.Infrastructure.Commands;
+using LearnWPF.ViewModels.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Input;
 
 namespace LearnWPF.ViewModels
 {
@@ -24,6 +27,8 @@ namespace LearnWPF.ViewModels
 
         #region Status
         private string _status = "Готов!";
+
+
         /// <summary>
         /// Статус окна
         /// </summary>
@@ -33,5 +38,21 @@ namespace LearnWPF.ViewModels
             set => Set(ref _status, value);
         }
         #endregion
+
+        #region Команды
+        public ICommand CloseApplicationCommand {  get; }
+        private void OnCloseApplicationCommandExecuted(object p)
+        {
+            Application.Current.Shutdown();
+        }
+
+        // Команда доступна всегда для выполенения
+        private bool CanCloseApplicationCommandExecute(object p) => true;
+        #endregion
+
+        public MainVindowViewModel()
+        {
+            CloseApplicationCommand = new LambdaCommand(OnCloseApplicationCommandExecuted, CanCloseApplicationCommandExecute);
+        }
     }
 }
