@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LearnWPF"
         xmlns:vm="clr-namespace:LearnWPF.ViewModels"
+        xmlns:cmd="clr-namespace:LearnWPF.Infrastructure.Commands"
         mc:Ignorable="d"
         Height="450" Width="800"
         Title="{Binding Path=TItle}" 
@@ -12,10 +13,18 @@
     <Window.DataContext>
         <vm:MainVindowViewModel/>
     </Window.DataContext>
+    <Window.Resources>
+        <cmd:CloseApplicationCommand x:Key="CloseAppCommandResource"/>
+    </Window.Resources>
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="Файл">
-                <MenuItem Header="Выход" Command="{Binding Path=CloseApplicationCommand}"></MenuItem>
+                <!--<MenuItem Header="Выход" Command="{Binding Path=CloseApplicationCommand}"></MenuItem>-->
+                <MenuItem Header="Выход">
+                    <MenuItem.Command>
+                        <cmd:CloseApplicationCommand/>
+                    </MenuItem.Command>
+                </MenuItem>
             </MenuItem>
             <MenuItem Header="Помощь">
                 <MenuItem Header="О программе"></MenuItem>
@@ -48,6 +57,14 @@
                            RadiusX="5" RadiusY="5" Margin="5"/>
                     <Ellipse Grid.Column="1" Grid.Row="0"
                              Fill="Aqua" Stroke="Azure" StrokeThickness="3">
+                        <!--Ради экспериментов навешивал на эллипс команду выхода-->
+                        <!--<Ellipse.InputBindings>
+                            <MouseBinding MouseAction="LeftDoubleClick">
+                                <MouseBinding.Command>
+                                    <cmd:CloseApplicationCommand/>
+                                </MouseBinding.Command>
+                            </MouseBinding>
+                        </Ellipse.InputBindings>-->
                     </Ellipse>
                     <!--Для динамического изменения размеров-->
                     <GridSplitter Grid.Column="0" Grid.Row="0" Grid.RowSpan="2"

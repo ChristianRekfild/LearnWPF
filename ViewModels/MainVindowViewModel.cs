@@ -39,20 +39,20 @@ namespace LearnWPF.ViewModels
         }
         #endregion
 
-        #region Команды
-        public ICommand CloseApplicationCommand {  get; }
-        private void OnCloseApplicationCommandExecuted(object p)
-        {
-            Application.Current.Shutdown();
-        }
+        //#region Команды
+        //public ICommand CloseApplicationCommand {  get; }
+        //private void OnCloseApplicationCommandExecuted(object p)
+        //{
+        //    Application.Current.Shutdown();
+        //}
 
-        // Команда доступна всегда для выполенения
-        private bool CanCloseApplicationCommandExecute(object p) => true;
-        #endregion
+        //// Команда доступна всегда для выполенения
+        //private bool CanCloseApplicationCommandExecute(object p) => true;
+        //#endregion
 
-        public MainVindowViewModel()
-        {
-            CloseApplicationCommand = new LambdaCommand(OnCloseApplicationCommandExecuted, CanCloseApplicationCommandExecute);
-        }
+        //public MainVindowViewModel()
+        //{
+        //    CloseApplicationCommand = new LambdaCommand(OnCloseApplicationCommandExecuted, CanCloseApplicationCommandExecute);
+        //}
     }
 }
