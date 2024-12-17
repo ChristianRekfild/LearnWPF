@@ -1,4 +1,5 @@
 ﻿using LearnWPF.Infrastructure.Commands;
+using LearnWPF.Models;
 using LearnWPF.ViewModels.Base;
 using System;
 using System.Collections.Generic;
@@ -39,6 +40,23 @@ namespace LearnWPF.ViewModels
         }
         #endregion
 
+        #region Тестовые DataPoint
+        /// <summary>
+        /// Тестовый набор для визуализации графиков
+        /// </summary>
+        private IEnumerable<DataPoint> _testPoints;
+
+        /// <summary>
+        /// Тестовый набор для визуализации графиков
+        /// </summary>
+        public IEnumerable<DataPoint> TestPoints
+        {
+            get => _testPoints;
+            set => Set(ref _testPoints, value);
+        }
+        #endregion
+
+        #region Для теста
         //#region Команды
         //public ICommand CloseApplicationCommand {  get; }
         //private void OnCloseApplicationCommandExecuted(object p)
@@ -53,6 +71,23 @@ namespace LearnWPF.ViewModels
         //public MainVindowViewModel()
         //{
         //    CloseApplicationCommand = new LambdaCommand(OnCloseApplicationCommandExecuted, CanCloseApplicationCommandExecute);
-        //}
+        //} 
+        #endregion
+
+        public MainVindowViewModel()
+        {
+
+            var dataPoints = new List<DataPoint>((int)( 360 / 0.1));
+            for (var x = 0d; x <= 360; x += 0.1)
+            {
+                const double toRadius = Math.PI / 180;
+                var y = Math.Sin(x * toRadius);
+
+                dataPoints.Add(new DataPoint { XValue = x, YValue = y });
+                TestPoints = dataPoints;
+            }
+        }
+
+
     }
 }
